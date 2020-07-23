@@ -1,4 +1,4 @@
-# Python Programming
+# Python Programming: CodingNomads
 
 Here you can find the labs for our CodingNomads online Python Programming course.
 

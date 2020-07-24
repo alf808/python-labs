@@ -7,4 +7,11 @@ Symbol input: #
 Result: #ore python progra##ing please
 
 '''
+print("This application will replace all occurences of first letter in string with a symbol.")
+words = input("Please enter a string of words: ")
+symbol = input("Please enter a symbol: ")
 
+first_char = words[0]
+new_string = words.replace(first_char, symbol)
+
+print(new_string)

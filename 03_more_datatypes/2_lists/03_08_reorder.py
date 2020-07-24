@@ -7,3 +7,22 @@ Example input:  1,2,3,4,5,6,7,8,9,10
 Example output: 2,4,6,8,10,9,7,5,3,1
 
 '''
+print("Enter 10 numbers 1 at a time and app will perform a sort of transformation.")
+
+i = 0
+num_str = []
+num_str_pos_even = []
+
+while i < 10:
+    num = int(input(f"Please enter number {i+1}: "))
+    if i % 2 == 0:
+        num_str_pos_even.append(num)
+    else:
+        num_str.append(num)
+    i += 1
+
+for x in range(len(num_str_pos_even)):
+    temp = num_str_pos_even.pop()
+    num_str.append(temp)
+
+print(f"transformed: {num_str}")

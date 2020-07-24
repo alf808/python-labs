@@ -21,8 +21,6 @@ while i < 10:
         num_str.append(num)
     i += 1
 
-for x in range(len(num_str_pos_even)):
-    temp = num_str_pos_even.pop()
-    num_str.append(temp)
-
-print(f"transformed: {num_str}")
+num_str_pos_even.reverse()
+transformed_list = num_str + num_str_pos_even
+print(f"transformed: {transformed_list}")

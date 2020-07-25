@@ -10,3 +10,8 @@ NOTE: Check out the Python docs and see whether you can come up with a solution,
       Feel free to discuss any questions you have with your mentor and on the forum!
 
 '''
+highest_val = 0
+input_dict = {"item1": 5, "item2": 6, "item3": 1}
+# the code below is based on: https://careerkarma.com/blog/python-sort-a-dictionary-by-value/
+sorted_dict_by_val = sorted(input_dict.items(), key=lambda x:x[1])
+print(sorted_dict_by_val)

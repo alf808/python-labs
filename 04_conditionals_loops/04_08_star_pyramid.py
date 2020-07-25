@@ -17,3 +17,7 @@ Another example: if input is 3, you will output
 Hint: Think of nested for loops
 
 '''
+print("This application will print a triangle with base as large as user\'s input")
+user_input = int(input("Please enter an integer: "))
+for x in range(1, user_input+1):
+    print("*" * x)

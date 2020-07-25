@@ -7,3 +7,9 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+start = 1
+end = 100
+total = 0
+for x in range(start, end + 1):
+    total += x
+print(f"The sume is: {total}")

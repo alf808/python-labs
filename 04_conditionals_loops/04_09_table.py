@@ -8,3 +8,12 @@ Use a loop to print the following table to the console:
  40 41 42 43 44 45 46 47 48 49
 
 '''
+count = 1
+for x in range(50):
+    if count < 10:
+        print(x, end=" ")
+        count += 1
+    else:
+        # print the last item in that line then start over into next line
+        print(x)
+        count = 1

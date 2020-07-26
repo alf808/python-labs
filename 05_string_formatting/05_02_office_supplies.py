@@ -26,6 +26,8 @@ office = [
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
 # LASTNAME, Name           Office supply item
+# LONGERLASTNAME, Name     Office supply item
+
 for item in office:
     fullname = item['full_name'].split()
     new_full = f"{fullname[0]}, {fullname[1]}"

@@ -7,3 +7,10 @@ Write methods in the appropriate class so that you can calculate the area (of th
 perimeter (of the rectangle) and circumference of the circle.
 
 '''
+class Rectangle:
+    """class that models a rectangle"""
+    def __init__(self, height, width)
+
+class Circle:
+    """class that models a circle"""
+    def __init__(self, radius)

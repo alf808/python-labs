@@ -23,3 +23,21 @@ BONUS CHALLENGE: write a custom Exception that inherits from Exception and raise
 first 100 characters of any of the files contain the string "Prince".
 
 '''
+import os
+script_path = os.path.dirname(os.path.realpath(__file__))
+books_path = os.path.join(script_path, "books")
+#print(script_path)
+#print(books_path)
+book_files = os.listdir(books_path)
+#print(book_files)
+for bf in book_files:
+
+    if bf[:-4] == "war_and_peace":
+        print(f"found {bf}")
+
+    elif bf[:-4] == "crime_and_punishment":
+        print(f"found {bf}")
+    
+    elif bf[:-4] == "pride_and_prejudice":
+        print(f"found {bf}")
+

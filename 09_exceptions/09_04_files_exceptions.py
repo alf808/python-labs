@@ -48,10 +48,16 @@ for bf in book_files:
             with open(f"{books_path}/{bf}", "r") as fin:
                 warp = fin.readlines()
 
-# for bf in book_files:
-#     if "copy" not in bf:
-
-        #     first_char = warp[0][0]
+for bf in book_files:
+    if "copy" not in bf:
+        with open(f"{books_path}/{bf}", "r") as fin:
+            temp = fin.readline()
+            try:
+                first_char = temp[0:2]
+            except IndexError as ie:
+                print(f"something went wrong with book file {bf}: {ie} ")
+            else:
+                print(first_char)
 
 
 

@@ -31,9 +31,9 @@ books_path = os.path.join(script_path, "books")
 #print(books_path)
 book_files = os.listdir(books_path)
 
-#  Open crime_and_punishment.txt and overwrite the whole content with an empty string
 for bf in book_files:
     if "copy" not in bf:
+        #  Open crime_and_punishment.txt and overwrite with an empty string
         if "crime_and_punishment" in bf:
             crim = ""
             with open(f"{books_path}/{bf}", "r") as fin:
@@ -43,9 +43,14 @@ for bf in book_files:
                 crim = ""
                 fout.write(crim)
 
-        # elif "war"
-        # with open(f"books/{bf}", "r") as fin:
-        #     warp = fin.readlines()
+        #  read content of war_and_peace into a variable
+        elif "war_and_peace" in bf:
+            with open(f"{books_path}/{bf}", "r") as fin:
+                warp = fin.readlines()
+
+# for bf in book_files:
+#     if "copy" not in bf:
+
         #     first_char = warp[0][0]
 
 

@@ -24,20 +24,29 @@ first 100 characters of any of the files contain the string "Prince".
 
 '''
 import os
+# path script from https://stackoverflow.com/questions/51623506/python-os-listdir-no-such-file-or-directory
 script_path = os.path.dirname(os.path.realpath(__file__))
 books_path = os.path.join(script_path, "books")
 #print(script_path)
 #print(books_path)
 book_files = os.listdir(books_path)
-#print(book_files)
+
+#  Open crime_and_punishment.txt and overwrite the whole content with an empty string
 for bf in book_files:
+    if "copy" not in bf:
+        if "crime_and_punishment" in bf:
+            crim = ""
+            with open(f"{books_path}/{bf}", "r") as fin:
+                crim = fin.readlines()
 
-    if bf[:-4] == "war_and_peace":
-        print(f"found {bf}")
+            with open(f"{books_path}/{bf}", "w") as fout:
+                crim = ""
+                fout.write(crim)
 
-    elif bf[:-4] == "crime_and_punishment":
-        print(f"found {bf}")
-    
-    elif bf[:-4] == "pride_and_prejudice":
-        print(f"found {bf}")
+        # elif "war"
+        # with open(f"books/{bf}", "r") as fin:
+        #     warp = fin.readlines()
+        #     first_char = warp[0][0]
+
+
 

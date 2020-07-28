@@ -1,5 +1,9 @@
+.gitignore
 .idea
 venv
 .DS_Store
 _unused
+.vscode
+crime_and_punishment
+.gitignore
 .vscode

@@ -11,12 +11,9 @@ Test it and make sure it does not crash when you enter incorrect values.
 while True:
     try:
         user_input1 = int(input("Please enter first number: "))
-        user_input2 = int(input("Please enter second number"))
-
-    except TypeError:
-        print("that\'s not a number!")
-
-    try:
+        user_input2 = int(input("Please enter second number: "))
         print(user_input1 / user_input2)
     except ZeroDivisionError as zde:
         print(f"why do this: {zde}")
+    except ValueError:
+        print("You were told to enter numbers!")

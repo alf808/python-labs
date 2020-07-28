@@ -8,3 +8,15 @@ the script should handle:
 Test it and make sure it does not crash when you enter incorrect values.
 
 '''
+while True:
+    try:
+        user_input1 = int(input("Please enter first number: "))
+        user_input2 = int(input("Please enter second number"))
+
+    except TypeError:
+        print("that\'s not a number!")
+
+    try:
+        print(user_input1 / user_input2)
+    except ZeroDivisionError as zde:
+        print(f"why do this: {zde}")

@@ -8,3 +8,14 @@ fail and write tests that will check and prevent failure.
 You do not need to implement the actual functions after writing the tests but you may.
 
 '''
+import unittest
+
+from my_code import *
+
+class TestEverything(unittest.TestCase):
+
+    def test_add(self):
+        pass
+
+    def test_subtract(self):
+        pass

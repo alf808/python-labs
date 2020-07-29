@@ -21,14 +21,17 @@ class TestAverage(unittest.TestCase):
 
     def test_list_fraction(self):
         """test: average a list of fractions"""
-        data = [1/4, 1/3, 2/3]
+        data = [1/4, 1/4, 1/3, 2/3]
         result = average(data)
-        self.assertEqual(result, 1.25)
+        self.assertEqual(result, .375)
+
+    def test_range_int(self):
+        self.assertEqual(range(1,10), 2)
 
     def test_zero_division(self):
         data = []
         with self.assertRaises(ZeroDivisionError):
-            result = sum(data)
+            average(data)
 
 if __name__ == '__main__':
     unittest.main()

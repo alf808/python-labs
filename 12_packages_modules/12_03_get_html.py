@@ -9,3 +9,6 @@ TIP:
     very common. head over to SO and find a solution!
 
 '''
+import requests
+url = 'https://codingnomads.co/'
+print(requests.get(url).text)

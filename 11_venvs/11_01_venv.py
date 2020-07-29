@@ -10,3 +10,20 @@ In your CodingNomads folder create a new folder. Inside of that folder:
 7. Create a new virtual environment and install the packages from the requirements.txt file.
 
 '''
+mkdir test_env
+cd test_env
+python3 -m venv env
+source env/bin/activate
+pip install pandas numpy scipy
+pip freeze > requirements.txt
+deactivate
+cp requirements.txt ../
+cd ..
+rm -rf test_env
+------------------
+mkdir new_test_env
+cd new_test_env
+python3 -m venv env
+source env/bin/activate
+pip install -r ../requirements.txt
+pip freeze > requirements.txt

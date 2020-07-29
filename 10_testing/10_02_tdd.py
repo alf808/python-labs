@@ -10,12 +10,22 @@ You do not need to implement the actual functions after writing the tests but yo
 '''
 import unittest
 
-from my_code import *
+from my_calculator import *
 
 class TestEverything(unittest.TestCase):
 
     def test_add(self):
-        pass
+        self.assertEqual(add(1, 1), 2)
+        self.assertEqual(add(2, 3), 17)
 
     def test_subtract(self):
-        pass
+        self.assertEqual(subtract(2, 1), 1)
+        self.assertEqual(subtract(42, 7), 27)
+
+    def test_divide(self):
+        self.assertEqual(divide(1, 2), .5)
+        with self.assertRaises(ZeroDivisionError):
+            divide(5, 0)
+
+    def test_multiply(self):
+        self.assertEqual(multiply(4, 4), 16)

@@ -6,5 +6,7 @@ and yields the element and its index
 
 '''
 
-def my_enumerate(# your arguments):
-      # pass
+def my_enumerate(lst):
+      return [(idx, lst[idx]) for idx in range(len(lst))]
+
+print(my_enumerate(["a", "b", "c"]))

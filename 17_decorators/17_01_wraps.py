@@ -10,4 +10,6 @@ def p_tag(func):
 
 @p_tag
 def get_text(blurb):
-    return "wrapped in p\'s"
+    return blurb
+
+print(get_text("now is the time"))
